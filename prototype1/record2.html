@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAVIS - Step 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 50: '#eff6ff', 600: '#2563eb', 700: '#1d4ed8' } } } } }</script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased" data-video-id="video2">
+    <header class="bg-white border-b border-slate-200"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><span class="font-bold text-xl text-slate-900">Step 2 of 3</span><a href="home.html" class="text-sm text-slate-500">Cancel</a></div></header>
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-extrabold text-slate-900">Deep Inspiration</h1>
+            <p class="text-slate-500 mt-2">Press record when ready.</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div class="lg:col-span-2 bg-black rounded-xl overflow-hidden aspect-video relative">
+                <video id="cameraFeed" autoplay muted playsinline class="w-full h-full object-cover"></video>
+                <div id="recordingIndicator" class="hidden absolute top-4 right-4 flex items-center gap-2 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+                    <div class="w-2 h-2 bg-white rounded-full"></div> Recording
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-center">
+                <h3 class="text-xl font-bold text-brand-600 mb-6">Phase 2</h3>
+                <div id="outputTxt" class="text-xl font-bold text-brand-600 mb-6"> Output Text</div>
+                <div id="outputTxt" class="text-xl font-bold text-black w-full mb-4 px-4 py-2  rounded-xl mb-6"> Output Text</div>
+                <button id="recordBtn" class="w-full mb-4 px-6 py-4 bg-brand-600 text-white rounded-xl font-medium shadow hover:opacity-90 transition-colors">Start Recording</button>
+                <a id="nextBtn" href="record3.html" class="hidden block w-full px-6 py-4 border-2 border-brand-600 text-brand-600 rounded-xl font-medium hover:bg-brand-50 transition-colors">Continue to Next Phase</a>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
