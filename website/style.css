@@ -1,0 +1,35 @@
+/* Smooth transitions for dropdowns and mobile menu */
+.dropdown-menu {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform-origin: top;
+}
+.dropdown-menu.hidden {
+    opacity: 0;
+    transform: scaleY(0.95);
+    pointer-events: none;
+}
+.dropdown-menu.block {
+    opacity: 1;
+    transform: scaleY(1);
+    pointer-events: auto;
+}
+/* Mobile menu slide effect */
+#mobileMenu {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+#mobileMenu.is-open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Video Feed Styling */
+.video-container {
+    background-color: #000;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
